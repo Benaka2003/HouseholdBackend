@@ -11,7 +11,9 @@ connectDB();
 
 app.use(express.json());
 
-
+app.get("/", (req, res) => {
+  res.send("Welcome to the Household Inventory API");
+});
 const authMiddleware = require("./middleware/authMiddleware");
 
 
